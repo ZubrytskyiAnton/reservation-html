@@ -5,22 +5,120 @@
     <title>Reservation</title>
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/searchbox.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../lib/raty/jquery.raty.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/multi-search-hotel.js" type="module"></script>
 </head>
 <body>
+    <div class="common-overlay"></div>
     <div class="mobile-filtering">
-        <div class="container">
+        <div class="overlay"></div>
+        <div class="content container">
             <div class="heading">
                 <h5>Filter</h5>
-                <img src="../images/icons/close_black.svg" alt="">
+                <img class="close-filter" src="../images/icons/close_black.svg" alt="">
             </div>
-
+            <div class="left-sidebar-top-rating sidebar-section">
+                <div class="aside rating">
+                    <h5>Top Rating</h5>
+                    <!--                        @* TODO: Add Jquery Raty to handle rating filtering *@-->
+                    <!--                        @* TODO: need to add not fully filled star. Design request *@-->
+                    <div class="left-rating">
+                        <img src="../images/icons/full-star.svg" />
+                        <img src="../images/icons/full-star.svg" />
+                        <img src="../images/icons/full-star.svg" />
+                        <img src="../images/icons/full-star.svg" />
+                        <img src="../images/icons/empty-star.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="left-sidebar-pricing sidebar-section">
+                <h5>Price</h5>
+                <div class="price-box">
+                    <div id="price_ranger_mobile"></div>
+                    <form id="frm_price_range" name="">
+                        <div class="price-range-field">
+                            <label for="min_price" class="form-label">Min</label>
+                            <input type="number" name="min_price" id="min_price" placeholder="$0" class="form-control" />
+                        </div>
+                        <div class="price-range-field">
+                            <label for="max_price" class="form-label">Max</label>
+                            <input type="number" name="max_price" id="max_price" min="0" max="1500" placeholder="$0" class="form-control" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="left-sidebar-property-name sidebar-section">
+                <h5>Property name </h5>
+                <div class="search-hotel">
+                    <input type="text" placeholder="Property name" class="form-control" data-bind="value: hotelName" />
+                    <a href="javascript:void(0)" id="clear_search" class="clear-search"></a>
+                </div>
+            </div>
+            <div class="left-sidebar-nearby-landmark sidebar-sections">
+                <h5>Nearby Landmarks</h5>
+                <div class="search-location">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
+                    <button class="btn btn-sm showmore-neighbourhood" data-bind="">Show more</button>
+                </div>
+            </div>
+        </div>
+        <div class="filter-buttons">
+            <button class="btn btn-primary">Apply</button>
+            <button class="btn sort-button">Reset</button>
         </div>
     </div>
     <div class="mobile-sorting">
-
+        <div class="content">
+            <div class="container">
+                <div class="heading">
+                    <h5>Sort by</h5>
+                </div>
+                <div class="sort-checkboxes">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sortCheckDistance">
+                        <label class="form-check-label" for="sortCheckDistance">
+                            Distance
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sortCheckRating" checked>
+                        <label class="form-check-label" for="sortCheckRating">
+                            Star rating
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sortCheckPrice" checked>
+                        <label class="form-check-label" for="sortCheckPrice">
+                            Price
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sortCheckPromo" checked>
+                        <label class="form-check-label" for="sortCheckPromo">
+                            Promo
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Apply</button>
+            </div>
+        </div>
     </div>
     <div class="header-container">
         <header class="container-desktop">
@@ -130,19 +228,18 @@
     <!--                        @* TODO: Add Jquery Raty to handle rating filtering *@-->
     <!--                        @* TODO: need to add not fully filled star. Design request *@-->
                             <div class="left-rating">
-                                <img src="../images/full-star.svg" />
-                                <img src="../images/full-star.svg" />
-                                <img src="../images/full-star.svg" />
-                                <img src="../images/full-star.svg" />
-                                <img src="../images/empty-star.svg" />
+                                <img src="../images/icons/full-star.svg" />
+                                <img src="../images/icons/full-star.svg" />
+                                <img src="../images/icons/full-star.svg" />
+                                <img src="../images/icons/not-full-star.svg" />
+                                <img src="../images/icons/empty-star.svg" />
                             </div>
                         </div>
                     </div>
                     <div class="left-sidebar-pricing sidebar-section">
                         <h5>Price</h5>
                         <div class="price-box">
-    <!--                        @* TODO: Add slider Jqeury implementation to make range dynamic *@-->
-                            <div id="price_range"></div>
+                            <div id="price_ranger"></div>
                             <form id="frm_price_range" name="">
                                 <div class="price-range-field">
                                     <label for="min_price" class="form-label">Min</label>
@@ -162,7 +259,7 @@
                             <a href="javascript:void(0)" id="clear_search" class="clear-search"></a>
                         </div>
                     </div>
-                    <div class="left-sidebar-nearby-landmark sidebar-sections">
+                    <div class="left-sidebar-nearby-landmark sidebar-section">
                         <h5>Nearby Landmarks</h5>
                         <div class="search-location">
                             <div class="form-check">
@@ -182,7 +279,7 @@
                     </div>
                 </div>
                 <div class="filtering-sorting mobile col-12">
-                    <button class="btn filter active">
+                    <button class="btn filter">
                         <span>Filter</span>
                         <img src="../images/icons/filter.svg" alt="Filter">
                     </button>
@@ -205,15 +302,15 @@
                         <div class="highest-rated sort active asc">
                             <a href="javascript:void(0)">
                                 <span>Star rating</span>
-                                <img class="arrow-up" src="../images/arrow-up.svg" />
-                                <img class="arrow-down" src="../images/arrow-up.svg" />
+                                <img class="arrow-up" src="../images/icons/arrow-up.svg" />
+                                <img class="arrow-down" src="../images/icons/arrow-up.svg" />
                             </a>
                         </div>
                         <div class="price sort active desc">
                             <a href="javascript:void(0)">
                                 <span>Price</span>
-                                <img class="arrow-up" src="../images/arrow-up.svg" />
-                                <img class="arrow-down" src="../images/arrow-up.svg" />
+                                <img class="arrow-up" src="../images/icons/arrow-up.svg" />
+                                <img class="arrow-down" src="../images/icons/arrow-up.svg" />
                             </a>
                         </div>
                         <div class="promo sort">
@@ -240,11 +337,11 @@
                                 <div class="hotel-list-item__info col-12 col-lg-8 col-md-8">
                                     <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
                                     <div class="hotel-rating">
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/empty-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/empty-star.svg" />
                                     </div>
                                     <div class="hotel-promo">
                                         <span>PROMO.</span>
@@ -296,11 +393,11 @@
                                 <div class="hotel-list-item__info col-12 col-lg-8 col-md-8">
                                     <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
                                     <div class="hotel-rating">
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/empty-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/empty-star.svg" />
                                     </div>
                                     <div class="hotel-promo">
                                         <span>PROMO.</span>
@@ -352,11 +449,11 @@
                                 <div class="hotel-list-item__info col-12 col-lg-8 col-md-8">
                                     <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
                                     <div class="hotel-rating">
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/empty-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/empty-star.svg" />
                                     </div>
                                     <div class="hotel-promo">
                                         <span>PROMO.</span>
@@ -408,11 +505,11 @@
                                 <div class="hotel-list-item__info col-12 col-lg-8 col-md-8">
                                     <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
                                     <div class="hotel-rating">
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/full-star.svg" />
-                                        <img src="../images/empty-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/empty-star.svg" />
                                     </div>
                                     <div class="hotel-promo">
                                         <span>PROMO.</span>

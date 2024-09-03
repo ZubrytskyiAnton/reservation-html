@@ -44,6 +44,11 @@
     padding: 0 0 24px;
 }
 
+.sidebar-section h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .left-side-map {
     position: relative;
     width: 100%;
@@ -77,10 +82,39 @@
     margin-top: 12px;
 }
 
+.left-sidebar-top-rating .left-rating img {
+    height: 29px;
+}
+
 .left-sidebar-pricing {
     padding-top: 24px;
     border-bottom: 1px solid #D2D7D8;
     margin-bottom: 24px;
+}
+
+.left-sidebar-pricing .ui-slider {
+    margin-bottom: 18px;
+}
+
+.ui-slider-horizontal {
+    height: 2px;
+    background: #D2D7D8;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    height: 2px;
+    background: #006E8E;
+    top: -1px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+    height: 24px;
+    width: 24px;
+    background: #006E8E;
+    border-radius: 50%;
+    border: none;
+    top: -11px;
+    margin-left: -1px;
 }
 
 .left-sidebar-pricing h5 {
@@ -97,6 +131,7 @@
     font-size: 14px;
     margin-bottom: 0;
     color: #333333;
+    font-weight: 600;
 }
 
 .left-sidebar-pricing .price-range-field {
@@ -593,6 +628,34 @@ footer .footer-top .social a {
 .mobile-filtering,
 .mobile-sorting {
     display: none;
+    overflow-y: auto;
+}
+
+.mobile-filtering .overlay {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-filtering .content {
+    z-index: 3;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.common-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #333333;
+    opacity: 0.8;
+    z-index: 1;
 }
 
 @media (max-width: 991px) {
@@ -632,6 +695,120 @@ footer .footer-top .social a {
     footer .footer-bottom .currency,
     footer .footer-bottom .footer-nav {
         margin-bottom: 16px;
+    }
+
+    .mobile-filtering {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .mobile-filtering h5 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .mobile-filtering form label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .mobile-filtering .heading {
+        font-size: 20px;
+        line-height: 28px;
+        display: flex;
+        flex-flow: row;
+        font-weight: 700;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        padding: 15px 0;
+    }
+
+    .mobile-filtering .heading img {
+        cursor: pointer;
+    }
+
+    .mobile-filtering .filter-buttons {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background: #F7F7F7;
+        z-index: 3;
+        position: fixed;
+        bottom: 0;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .mobile-filtering .filter-buttons button {
+        width: 100%;
+        max-width: 360px;
+        text-transform: uppercase;
+    }
+
+    .mobile-filtering .filter-buttons button:first-child {
+        margin-bottom: 8px;
+    }
+
+    .mobile-filtering .filter-buttons button.sort-button {
+        background: #E5EBED;
+        color: #333333;
+    }
+
+    .mobile-sorting {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 360px;
+        z-index: 1;
+    }
+
+    .mobile-sorting .content {
+        position: fixed;
+        height: 360px;
+        background: #fff;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        padding: 16px 0;
+    }
+
+    .mobile-sorting .heading {
+        margin-bottom: 16px;
+    }
+
+    .mobile-sorting .heading h5 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .mobile-sorting .sort-checkboxes {
+        margin-left: 1.5em;
+    }
+
+    .mobile-sorting .sort-checkboxes .form-check {
+        padding: 16px 0;
+        position: relative;
+    }
+
+    .mobile-sorting .sort-checkboxes .form-check:not(:last-child):after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -1.5em;
+        width: 100%;
+        height: 1px;
+        background: #D2D7D8;
+    }
+
+    .mobile-sorting button {
+        width: 100%;
+        bottom: 0;
     }
 }
 
@@ -739,17 +916,5 @@ footer .footer-top .social a {
 
     footer .footer-bottom .footer-nav a:not(:first-child):before {
         margin: 0 4px;
-    }
-
-    .mobile-filtering,
-    .mobile-sorting {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        display: block;
-        z-index: 2;
     }
 }
