@@ -1,0 +1,430 @@
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Reservation</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<div class="header-container">
+    <header class="container-desktop">
+        <a href="/"> <img src="./images/logo.png" alt="logo" width="310" height="20" class="header-logo" /></a>
+        <div class="header-right">
+            <div class="header-title">
+                <a class="mobile-phone campaign-phone" href="tel:844-670-8077" aria-label="Reservations.com Phone Number">
+                    <img src="./images/icons/phone_red.svg" height="20" width="20" alt="call us" />
+                </a>
+                <div class="header-reservations d-none d-md-flex">
+                    RESERVATIONS
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="2" height="24" viewBox="0 0 2 24" fill="none">
+                <path d="M1 1L1 25" stroke="#CCCCCC" stroke-linecap="round" class="d-none d-md-flex"></path>
+            </svg>
+
+            <div class="header-phone d-none d-md-flex">
+                <a href="tel:1-800-855-516-1090" class="campaign-phone">
+                    <span class="campaign-phone">855-516-1090</span>
+                </a>
+            </div>
+        </div>
+    </header>
+</div>
+<div class="multi-hotel-results-page">
+    <!--SearchBox-->
+    <div class="container">
+        <div class="total-results">
+            <div class="col-md-12">
+                <p itemprop="mainContentOfPage" class="results">We currently have <span>12</span> hotels FOR <span>12/08/2024 - 13/08/2024</span> IN <span>Florida</span></p>
+                <p itemprop="mainContentOfPage" class="results  mobile">We currently have <span>12</span> hotels</p>
+            </div>
+        </div>
+        <div class="multi-hotel-results__content row">
+            <div class="multi-hotel-results__left-sidebar col-lg-3 col-md-4">
+                <div class="left-sidebar-map sidebar-section">
+                    <a class="left-side-map" href="javascript:;">
+                        <img src="./images/map.jpg" />
+                        <button class="btn">View on map</button>
+                    </a>
+                </div>
+                <div class="left-sidebar-top-rating sidebar-section">
+                    <div class="aside rating">
+                        <h5>Top Rating</h5>
+                        <!--                        @* TODO: Add Jquery Raty to handle rating filtering *@-->
+                        <!--                        @* TODO: need to add not fully filled star. Design request *@-->
+                        <div class="left-rating">
+                            <img src="./images/full-star.svg" />
+                            <img src="./images/full-star.svg" />
+                            <img src="./images/full-star.svg" />
+                            <img src="./images/full-star.svg" />
+                            <img src="./images/empty-star.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="left-sidebar-pricing sidebar-section">
+                    <h5>Price</h5>
+                    <div class="price-box">
+                        <!--                        @* TODO: Add slider Jqeury implementation to make range dynamic *@-->
+                        <div id="price_range"></div>
+                        <form id="frm_price_range" name="">
+                            <div class="price-range-field">
+                                <label for="min_price" class="form-label">Min</label>
+                                <input type="number" name="min_price" id="min_price" placeholder="0$" class="form-control" />
+                            </div>
+                            <div class="price-range-field">
+                                <label for="max_price" class="form-label">Max</label>
+                                <input type="number" name="max_price" id="max_price" min="0" max="1500" placeholder="0$" class="form-control" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="left-sidebar-property-name sidebar-section">
+                    <h5>Property name </h5>
+                    <div class="search-hotel">
+                        <input type="text" placeholder="Property name" class="form-control" data-bind="value: hotelName" />
+                        <a href="javascript:void(0)" id="clear_search" class="clear-search"></a>
+                    </div>
+                </div>
+                <div class="left-sidebar-nearby-landmark sidebar-sections">
+                    <h5>Nearby Landmarks</h5>
+                    <div class="search-location">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Checked checkbox
+                            </label>
+                        </div>
+                        <button class="btn btn-sm showmore-neighbourhood" data-bind="">Show more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="multi-hotel-results__content col-lg-9 col-md-8">
+                <div class="multi-hotel-results__sorting">
+                    <div class="distance sort active">
+                        <a href="javascript:void(0)">
+                            <span>Distance</span>
+                        </a>
+                    </div>
+                    <div class="highest-rated sort active asc">
+                        <a href="javascript:void(0)">
+                            <span>Star rating</span>
+                            <img class="arrow-up" src="./images/arrow-up.svg" />
+                            <img class="arrow-down" src="./images/arrow-up.svg" />
+                        </a>
+                    </div>
+                    <div class="price sort active desc">
+                        <a href="javascript:void(0)">
+                            <span>Price</span>
+                            <img class="arrow-up" src="./images/arrow-up.svg" />
+                            <img class="arrow-down" src="./images/arrow-up.svg" />
+                        </a>
+                    </div>
+                    <div class="promo sort">
+                        <a href="javascript:void(0)">
+                            <span>Promo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="multi-hotel-results__hotel-list">
+                    <!--                    <div class="no-hotels">There are currently no hotels matching your request.</div>-->
+                    <div class="hotel-list-item row">
+                        <div class="hotel-list-item__section col-9">
+                            <div class="hotel-list-item__img">
+                                <img src="images/hotel-image.jpg"  alt="hotel-image"/>
+                                <div class="navigation">
+                                    <a class="prev" href="#">
+                                        <img src="./images/icons/prev-arrow.svg" alt="">
+                                    </a>
+                                    <a class="next" href="#">
+                                        <img src="./images/icons/next-arrow.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hotel-list-item__info">
+                                <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
+                                <div class="hotel-rating">
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/empty-star.svg" />
+                                </div>
+                                <div class="hotel-promo">
+                                    <span>PROMO.</span>
+                                    Special deal. Save 15%
+                                </div>
+                                <div class="hotel-distance">2600 Sloat Blvd, San Francisco, CA 94116 –
+                                    <span>0.11 miles</span>
+                                </div>
+                                <div class="hotel-phone">
+                                    <img src="./images/icons/phone.svg" alt="hotel-phone">
+                                    <span>415-665-9000</span>
+                                </div>
+                                <div class="hotel-review-rate">
+                                    <div class="score green">4.5</div>
+                                    <div class="desc">
+                                        <p class="desc-text">Excellent</p>
+                                        <p class="desc-reviews">248 reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-list-item__reserve col-3">
+                            <div class="price">
+                                <span class="old-price">$250 103</span>
+                                <span class="current-price">$200 103</span>
+                                <span class="per">per night</span>
+                                <div class="total-price">
+                                    <span>$400 206</span>
+                                    <span class="desc">Total Includes taxes & fees</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                    <div class="hotel-list-item row">
+                        <div class="hotel-list-item__section col-9">
+                            <div class="hotel-list-item__img">
+                                <img src="images/hotel-image.jpg"  alt="hotel-image"/>
+                                <div class="navigation">
+                                    <a class="prev" href="#">
+                                        <img src="./images/icons/prev-arrow.svg" alt="">
+                                    </a>
+                                    <a class="next" href="#">
+                                        <img src="./images/icons/next-arrow.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hotel-list-item__info">
+                                <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
+                                <div class="hotel-rating">
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/empty-star.svg" />
+                                </div>
+                                <div class="hotel-promo">
+                                    <span>PROMO.</span>
+                                    Special deal. Save 15%
+                                </div>
+                                <div class="hotel-distance">2600 Sloat Blvd, San Francisco, CA 94116 –
+                                    <span>0.11 miles</span>
+                                </div>
+                                <div class="hotel-phone">
+                                    <img src="./images/icons/phone.svg" alt="hotel-phone">
+                                    <span>415-665-9000</span>
+                                </div>
+                                <div class="hotel-review-rate">
+                                    <div class="score green">4.5</div>
+                                    <div class="desc">
+                                        <p class="desc-text">Excellent</p>
+                                        <p class="desc-reviews">248 reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-list-item__reserve col-3">
+                            <div class="price">
+                                <span class="old-price">$250 103</span>
+                                <span class="current-price">$200 103</span>
+                                <span class="per">per night</span>
+                                <div class="total-price">
+                                    <span>$400 206</span>
+                                    <span class="desc">Total Includes taxes & fees</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                    <div class="hotel-list-item row">
+                        <div class="hotel-list-item__section col-9">
+                            <div class="hotel-list-item__img">
+                                <img src="images/hotel-image.jpg"  alt="hotel-image"/>
+                                <div class="navigation">
+                                    <a class="prev" href="#">
+                                        <img src="./images/icons/prev-arrow.svg" alt="">
+                                    </a>
+                                    <a class="next" href="#">
+                                        <img src="./images/icons/next-arrow.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hotel-list-item__info">
+                                <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
+                                <div class="hotel-rating">
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/empty-star.svg" />
+                                </div>
+                                <div class="hotel-promo">
+                                    <span>PROMO.</span>
+                                    Special deal. Save 15%
+                                </div>
+                                <div class="hotel-distance">2600 Sloat Blvd, San Francisco, CA 94116 –
+                                    <span>0.11 miles</span>
+                                </div>
+                                <div class="hotel-phone">
+                                    <img src="./images/icons/phone.svg" alt="hotel-phone">
+                                    <span>415-665-9000</span>
+                                </div>
+                                <div class="hotel-review-rate">
+                                    <div class="score green">4.5</div>
+                                    <div class="desc">
+                                        <p class="desc-text">Excellent</p>
+                                        <p class="desc-reviews">248 reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-list-item__reserve col-3">
+                            <div class="price">
+                                <span class="old-price">$250 103</span>
+                                <span class="current-price">$200 103</span>
+                                <span class="per">per night</span>
+                                <div class="total-price">
+                                    <span>$400 206</span>
+                                    <span class="desc">Total Includes taxes & fees</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                    <div class="hotel-list-item row">
+                        <div class="hotel-list-item__section col-9">
+                            <div class="hotel-list-item__img">
+                                <img src="images/hotel-image.jpg"  alt="hotel-image"/>
+                                <div class="navigation">
+                                    <a class="prev" href="#">
+                                        <img src="./images/icons/prev-arrow.svg" alt="">
+                                    </a>
+                                    <a class="next" href="#">
+                                        <img src="./images/icons/next-arrow.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hotel-list-item__info">
+                                <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
+                                <div class="hotel-rating">
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/full-star.svg" />
+                                    <img src="./images/empty-star.svg" />
+                                </div>
+                                <div class="hotel-promo">
+                                    <span>PROMO.</span>
+                                    Special deal. Save 15%
+                                </div>
+                                <div class="hotel-distance">2600 Sloat Blvd, San Francisco, CA 94116 –
+                                    <span>0.11 miles</span>
+                                </div>
+                                <div class="hotel-phone">
+                                    <img src="./images/icons/phone.svg" alt="hotel-phone">
+                                    <span>415-665-9000</span>
+                                </div>
+                                <div class="hotel-review-rate">
+                                    <div class="score green">4.5</div>
+                                    <div class="desc">
+                                        <p class="desc-text">Excellent</p>
+                                        <p class="desc-reviews">248 reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-list-item__reserve col-3">
+                            <div class="price">
+                                <span class="old-price">$250 103</span>
+                                <span class="current-price">$200 103</span>
+                                <span class="per">per night</span>
+                                <div class="total-price">
+                                    <span>$400 206</span>
+                                    <span class="desc">Total Includes taxes & fees</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-more-hotels">
+                    <button class="btn">
+                        Showing more hotels
+                        <div class="spinner-border spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="row">
+    <div class="footer-top col-12">
+        <div class="container">
+            <p>To make a new reservation call: <span>855-516-1090</span></p>
+            <p>If you are a person who needs an accessibility accommodation in order to utilize this Site and our Services, we offer certain assistance that may help.
+                Please call our 24/7 Customer Call Center at <span>1800-916-4339</span></p>
+            <a href="#">Click here to Cancel your Reservation or Resend Confirmation Email</a>
+            <p class="additional-help large-section">
+                Need additional help?
+                <a href="#">Need customer service</a>
+            </p>
+            <p class="large-section">
+                <span>Reservations.com - Your Independent Travel Network</span>
+                <span>Hotel Non-Affiliation – Our Independence is Your Advantage</span>
+                <span>Connecting Travelers to Expectation Deals</span>
+            </p>
+            <p class="large-section">
+                <span>About Reservations.com</span>
+                <span>All Destinations</span>
+                <span>Hotels by State</span>
+                <span>Customer Success</span>
+                <span>Press & Media</span>
+                <span>Do not sell my personal info</span>
+            </p>
+            <p class="social">
+                    <span>You can connect with us on
+                        <a href="#">Facebook</a>,
+                        <a href="#">Twitter</a>,
+                        <a href="#">YouTube</a>,
+                        <a href="#">Instagram</a>,
+                        <a href="#">LinkedIn</a> and
+                        <a href="#">Pinterest</a>
+                    </span>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom col-12">
+        <div class="container">
+            <div class="currency">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>United States - USD ($)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="footer-nav">
+                <a href="#">Terms of service</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="copyright">
+                © 2024 Reservations.com. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

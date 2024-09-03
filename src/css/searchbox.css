@@ -1,0 +1,461 @@
+
+input.form-control[type="text"] {
+    padding: 1rem 0.625rem 1rem 2.375rem !important;
+    box-sizing: border-box;
+    max-height: 3.5rem;
+    font-weight: 600;;
+}
+
+input.form-control::placeholder {
+    font-weight: 400;
+}
+
+.form-control#googlePlacesNew:focus {
+    padding: 1rem 2.2rem 1rem 0.8rem !important;
+    box-sizing: border-box;
+}
+
+.form-control:focus ~ #map-marker, .form-control:focus ~ label {
+    display: none;
+}
+
+.form-control ~ label {
+    display: none;
+}
+
+.form-control.filled[type="text"] {
+    padding: 1.47rem 0.625rem 0.531rem 2.375rem !important;
+    position: relative;
+}
+
+.form-control.filled ~ label {
+    display: block;
+    color: #999999;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 2.46rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 3.188rem);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group .clear-icon {
+    position: absolute;
+    right: 0.875rem;
+    top: 1.125rem;
+}
+
+.form-group .input-icon {
+    position: absolute;
+    left: 0.625rem;
+    top: 1.125rem;
+    pointer-events: none;
+}
+
+.form-group .input-icon.result-mobile {
+    right: 0.625rem;
+    left: initial;
+}
+
+input.readonly-input[readonly] {
+    cursor: default;
+}
+
+.form-container {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.searchbox {
+    background-color: #F4F6F8;
+}
+
+.searchbox .section-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+#search-result-mobile {
+    padding: 0.625rem 2.2rem 1.813rem 0.625rem !important;
+    line-height: 1rem;
+    font-size: 0.875rem;
+    display: none;
+}
+
+#search-result-mobile ~ label {
+    top: initial;
+    bottom: 0.625rem;
+    left: 0.625rem;
+}
+
+.pac-container {
+    top: 58px;
+    left: 0;
+    width: 100%;
+    padding: 0 0.25rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #FFFFFF;
+    position: absolute;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+}
+
+.pac-container .pac-item {
+    margin-top: 1rem;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.25rem 0.375rem;
+    cursor: pointer;
+    min-height: 47px;
+}
+
+.pac-container .pac-item:hover, .pac-container .pac-item.active {
+    background-color: #E5EBED;
+    border-radius: 0.5rem;
+}
+
+.pac-item .pac-text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.pac-item .pac-icon {
+    display: block;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    background-size: 1.25rem;
+}
+
+.pac-text-container .pac-main-query {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.pac-text-container .pac-main-query .pac-matched {
+    font-weight: 600;
+}
+
+.pac-text-container .pac-secondary-query {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    color: #999999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.pac-item span {
+    line-height: 0.875rem;
+}
+
+.calendar-close {
+    display: none;
+}
+
+/*Rooms and guests*/
+
+.room-form-container {
+    position: relative;
+}
+
+.rooms-form-container {
+    position: relative;
+    flex: 1 1 auto;
+    max-width: 16.875rem;
+}
+
+#rooms-form {
+    font-family: "Inter", sans-serif;
+    min-width: 337px;
+    border-radius: 0.5rem;
+    padding: 1rem 0.625rem;
+    color: #333333;
+    line-height: 1.25rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 3.875rem;
+    left: 0;
+    background: #FFFFFF;
+    z-index: 99999;
+    display: none;
+}
+
+.rooms-form-title {
+    display: none;
+}
+
+.form-control:focus {
+    border: var(--bs-border-width) solid #d2d7d8;
+}
+
+#rooms-form .rooms-form-title {
+    font-weight: 600;
+}
+
+#room-container {
+    width: 100%;
+}
+
+#room-container .room-block {
+    margin-bottom: 1rem;
+}
+
+#room-container .rooms-form-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+}
+
+#room-container .rooms-form-name {
+    font-weight: 400;
+}
+
+#room-container .rooms-form-info {
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #999999;
+    font-weight: 400;
+}
+
+#room-container .rooms-form-item {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#room-container .rooms-form-btns-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+
+#room-container .rooms-form-count-btn {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #99AFB5;
+    border-radius: 100px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#room-container .rooms-form-amount {
+    font-weight: 400;
+}
+
+
+#room-container .rooms-form-children-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#room-container .rooms-form-children-wrapper:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+#room-container .rooms-form-children-age {
+    padding: 1rem 0;
+    border-top: 1px solid #D2D7D8;
+    border-bottom: 1px solid #D2D7D8;
+    margin-top: 1rem;
+}
+
+#room-container .rooms-form-children-age {
+    display: none;
+}
+
+#room-container .rooms-form-children-age span {
+    font-weight: 400;
+}
+
+#room-container .room-form-child-dropdown {
+    width: 8.375rem;
+}
+
+.rooms-wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.rooms-wrapper::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+.rooms-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(85, 85, 85, 0.37);
+    border-radius: 19px;
+}
+
+.room-form-btn-wrapper {
+    display: flex;
+}
+
+.room-form-btn-wrapper button {
+    margin-left: auto;
+}
+
+#room-container .btn-secondary, .room-form-btn-wrapper .btn-secondary {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    max-height: 2.25rem;
+}
+
+.room-form-btn-wrapper button.hide {
+    display: none !important;
+}
+
+#room-container .rooms-form-count-btn.disabled img {
+    opacity: 0.5;
+}
+
+.room-form-btn-wrapper.control, .room-form-btn-wrapper button.remove-room-btn {
+    margin-top: 1rem;
+}
+
+.room-form-btn-wrapper.control {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+}
+
+.room-form-btn-wrapper.control button {
+    text-transform: uppercase;
+    min-height: 2.75rem;
+}
+
+.room-form-btn-wrapper.control #form-reset-btn {
+    display: none !important;
+}
+
+.form-container #form-submit-btn {
+    min-width: max-content;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.form-container #form-close-btn {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .form-control {
+        font-size: 0.875rem;
+    }
+
+    .form-container {
+        flex-direction: column;
+        row-gap: 0.75rem;
+    }
+
+    .form-container #form-submit-btn {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .form-container #form-close-btn {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .form-container #form-submit-btn, .form-container #form-close-btn {
+        height: 2.75rem;
+    }
+
+    .searchbox .section-container {
+        padding: 1.5rem 0.938rem !important;
+        overflow-x: visible;
+    }
+
+    .daterangepicker {
+        position: fixed !important;
+        top: 0 !important;
+        height: 100%;
+    }
+
+    .daterangepicker .applyBtnCutom {
+        width: 100%;
+        height: 2.75rem !important;
+        font-size: 1rem !important;
+    }
+
+    .calendar-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 2rem 1.313rem 1.375rem 0;
+    }
+
+    #rooms-form {
+        min-width: auto;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        border-radius: initial;
+        top: 0;
+        left: 0;
+        padding: 1.5rem 0.938rem 10.875rem 0.938rem;
+        overflow: auto;
+    }
+
+    .rooms-form-title {
+        display: flex;
+        margin-bottom: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rooms-form-title span {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+    }
+
+    .rooms-form-container {
+        position: static;
+        max-width: 100%;
+    }
+
+    .room-form-btn-wrapper.control {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0.938rem;
+        background-color: #F7F7F7;
+        margin-top: 0;
+    }
+
+    .room-form-btn-wrapper.control button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .room-form-btn-wrapper.control #form-reset-btn {
+        display: block !important;
+    }
+}
