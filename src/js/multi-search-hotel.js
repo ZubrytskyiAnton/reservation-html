@@ -1,36 +1,26 @@
 $(document).ready(function() {
     // open filters
     document.querySelector(".btn.filter").addEventListener("click", function() {
-        document.querySelector("body").scroll({ behavior: "instant", top: 0 });
-        document.querySelector(".mobile-filtering").style.display = "block";
-        document.querySelector("body").style.overflowY = "hidden";
-
+        showFullScreenModal("mobile-filtering");
         // TODO: If filters set, make filters button active
         document.querySelector(".btn.filter").classList.toggle("active");
     });
 
     // close filters
     document.querySelector(".close-filter").addEventListener("click", function() {
-        document.querySelector(".mobile-filtering").style.display = "none";
-        document.querySelector("body").style.overflowY = "auto";
+        closeFullScreenModal("mobile-filtering");
     });
 
     // open sorting
     document.querySelector(".btn.sorting").addEventListener("click", function() {
-        document.querySelector("body").scroll({ behavior: "instant", top: 0 });
-        document.querySelector(".mobile-sorting").style.display = "block";
-        document.querySelector("body").style.overflowY = "hidden";
-        document.querySelector(".common-overlay").style.display = "block";
-
+        showFullScreenModal("mobile-sorting", true);
         // TODO: If sort set, make sort button active
         document.querySelector(".btn.sorting").classList.toggle("active");
     });
 
     // close sorting
     document.querySelector(".common-overlay").addEventListener("click", function() {
-        console.log("click common-overlay")
-        document.querySelector(".common-overlay").style.display = "none";
-        document.querySelector(".mobile-sorting").style.display = "none";
+        closeFullScreenModal("mobile-sorting", true);
     });
 
     // price ranger
@@ -41,4 +31,35 @@ $(document).ready(function() {
     $("#price_ranger_mobile").slider({
         range: true,
     });
+
+    // Image slider
+
+    $(".hotel-list-item__img .slider").slick({
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        arrows: true,
+        prevArrow: $(".prev"),
+        nextArrow: $(".next"),
+    });
 });
+
+function showFullScreenModal(elementCLass, isOverlay = false) {
+    document.querySelector("body").scroll({ behavior: "instant", top: 0 });
+    document.querySelector(`.${elementCLass}`).style.display = "block";
+    document.querySelector("body").style.overflowY = "hidden";
+
+    if (isOverlay) {
+        document.querySelector(".common-overlay").style.display = "block";
+    }
+}
+
+function closeFullScreenModal(elementCLass, isOverlay = false) {
+    document.querySelector("body").style.overflowY = "auto";
+    document.querySelector(`.${elementCLass}`).style.display = "none";
+
+    if (isOverlay) {
+        document.querySelector(".common-overlay").style.display = "none";
+    }
+}

@@ -285,12 +285,14 @@
 .hotel-list-item {
     border: 1px solid #D2D7D8;
     border-radius: 16px;
-    max-height: 299px;
+    height: 299px;
     box-sizing: border-box;
     margin-bottom: 24px;
     position: relative;
     display: flex;
     flex-flow: row;
+    box-shadow: 0 2px 5px 0 #00000014;
+    cursor: pointer;
 }
 
 .hotel-list-item .hotel-list-item__section {
@@ -304,6 +306,18 @@
     position: relative;
 }
 
+.hotel-list-item .promo-label {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    top: 16px;
+    left: 16px;
+    padding: 3px 8px 4px;
+    background: #2BBBE7;
+    color: #fff;
+    text-transform: uppercase;
+}
+
 .hotel-list-item .hotel-list-item__img img {
     height: 100%;
     width: 100%;
@@ -311,21 +325,17 @@
     border-radius: 16px 0 0 16px;
 }
 
-.hotel-list-item .hotel-list-item__img:hover .navigation {
-    opacity: 80%;
-}
-
-.hotel-list-item .hotel-list-item__img .navigation {
+.hotel-list-item .navigation {
     transition: all 0.3s ease;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
+    opacity: 80%;
 }
 
-.hotel-list-item .hotel-list-item__img .navigation a {
+.hotel-list-item .navigation button {
     position: absolute;
     background: #E5EBED;
     border-radius: 8px;
@@ -335,18 +345,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
-.hotel-list-item .hotel-list-item__img .navigation a img {
+.hotel-list-item .navigation button img {
     height: 10px;
     width: auto;
 }
 
-.hotel-list-item .hotel-list-item__img .navigation a.prev {
+.hotel-list-item .navigation button.prev {
     left: 6px;
 }
 
-.hotel-list-item .hotel-list-item__img .navigation a.next {
+.hotel-list-item .navigation button.next {
     right: 6px;
 }
 
@@ -360,13 +371,13 @@
 
 .hotel-list-item__info .hotel-name {
     font-size: 20px;
+    line-height: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 4px;
 }
 
 .hotel-list-item__info .hotel-rating {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .hotel-list-item__info .hotel-rating img {
@@ -377,7 +388,8 @@
     color: #CF0014;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 4px;
+    line-height: 22px;
+    margin-bottom: 6px;
 }
 
 .hotel-list-item__info .hotel-promo span {
@@ -388,12 +400,12 @@
 .hotel-list-item__info .hotel-distance {
     font-size: 16px;
     font-weight: 400;
+    line-height: 22px;
     margin-bottom: 6px;
 }
 
 .hotel-list-item__info .hotel-distance span {
     font-weight: 700;
-    color: #CF0014;
 }
 
 .hotel-list-item__info .hotel-phone {
@@ -401,16 +413,22 @@
     flex-flow: row;
     color: #006E8E;
     font-size: 16px;
-    margin-bottom: 4px;
+    line-height: 24px;
+    margin-bottom: 8px;
 }
 
 .hotel-list-item__info .hotel-phone img {
-    margin-right: 4px;
+    margin-right: 6px;
+}
+
+.hotel-list-item__info .hotel-phone a {
+    color: #006E8E;
 }
 
 .hotel-list-item__info .hotel-review-rate {
     display: flex;
     flex-flow: row;
+    max-height: 37px;
 }
 
 .hotel-list-item__info .hotel-review-rate .score {
@@ -418,6 +436,7 @@
     border-radius: 40px;
     font-size: 24px;
     font-weight: 600;
+    line-height: 29px;
     display: flex;
     align-items: center;
     margin-right: 8px;
@@ -436,12 +455,14 @@
 .hotel-list-item__info .hotel-review-rate .desc .desc-text {
     font-size: 16px;
     font-weight: 600;
+    line-height: 19px;
 }
 
 .hotel-list-item__info .hotel-review-rate .desc .desc-reviews {
     color: #6B7A85;
     font-size: 12px;
     font-weight: 400;
+    line-height: 14px;
 }
 
 .hotel-list-item__reserve {
@@ -456,18 +477,19 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .hotel-list-item__reserve .price .old-price {
     font-size: 16px;
     text-decoration: line-through;
     font-weight: 500;
+    line-height: 24px;
 }
 
 .hotel-list-item__reserve .price .current-price {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 36px;
     font-weight: 700;
 }
 
@@ -475,6 +497,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
+    margin-bottom: 6px;
 }
 
 .hotel-list-item__reserve .price .total-price {
@@ -484,7 +507,6 @@
     display: flex;
     flex-flow: column;
     line-height: 36px;
-    margin-top: 12px;
 }
 
 .hotel-list-item__reserve .price .total-price .total {
@@ -656,6 +678,34 @@ footer .footer-top .social a {
     background: #333333;
     opacity: 0.8;
     z-index: 1;
+}
+
+.no-results {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding-top: 48px;
+    text-align: center;
+}
+
+.no-results > img {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.no-results .text {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.no-results .text p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    padding-bottom: 6px;
 }
 
 @media (max-width: 991px) {
@@ -832,17 +882,28 @@ footer .footer-top .social a {
         padding: 0;
     }
 
+    .hotel-list-item__info .hotel-name {
+        line-height: 20px;
+    }
+
     .hotel-list-item__info .hotel-name,
     .hotel-list-item__reserve .price .old-price {
         font-size: 14px;
     }
 
     .hotel-list-item__info .hotel-rating {
-        margin-bottom: 4px;
+        margin-bottom: 8px;
+        margin-top: 4px;
+        height: 14px;
     }
 
     .hotel-list-item__info .hotel-rating img {
         height: 14px;
+        vertical-align: text-top;
+    }
+
+    .hotel-list-item__info .hotel-promo {
+        margin-bottom: 6px;
     }
 
     .hotel-list-item__info .hotel-promo,
@@ -852,10 +913,16 @@ footer .footer-top .social a {
     .hotel-list-item__reserve .price .total-price .total
     .hotel-list-item__reserve .price .per {
         font-size: 12px;
+        line-height: 18px;
     }
 
     .hotel-list-item__info .hotel-phone {
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        line-height: 16px;
+    }
+
+    .hotel-list-item__info .hotel-review-rate {
+        height: 32px;
     }
 
     .hotel-list-item__info .hotel-review-rate .score,
@@ -885,6 +952,11 @@ footer .footer-top .social a {
 
     .hotel-list-item__reserve .price .old-price {
         margin-right: 6px;
+        line-height: 32px;
+    }
+
+    .hotel-list-item__reserve .price .current-price {
+        line-height: 32px;
     }
 
     .hotel-list-item__reserve .price .old-price,
@@ -896,13 +968,22 @@ footer .footer-top .social a {
         display: block;
         width: 100%;
         font-weight: 400;
-        line-height: 20px;
+        line-height: 16px;
+        font-size: 12px;
+        margin-top: -6px;
     }
 
     .hotel-list-item__reserve .price .total-price {
         width: 100%;
         font-size: 14px;
         margin-top: 0;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    .hotel-list-item__reserve .price .total-price span:first-child {
+        font-size: 14px;
+        font-weight: 400;
         line-height: 24px;
     }
 
@@ -912,9 +993,15 @@ footer .footer-top .social a {
 
     .hotel-list-item__reserve .price .total-price .total {
         display: block;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     footer .footer-bottom .footer-nav a:not(:first-child):before {
         margin: 0 4px;
+    }
+
+    .multi-hotel-results-page .searchbox .form-container #form-submit-btn {
+        width: 100%;
     }
 }

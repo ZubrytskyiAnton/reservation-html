@@ -6,12 +6,15 @@
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/searchbox.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../lib/raty/jquery.raty.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="module" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../js/multi-search-hotel.js" type="module"></script>
 </head>
 <body>
@@ -121,7 +124,7 @@
         </div>
     </div>
     <div class="header-container">
-        <header class="container-desktop">
+        <header class="container">
             <a href="/"> <img src="../images/logo.png" alt="logo" width="310" height="20" class="header-logo" /></a>
             <div class="header-right">
                 <div class="header-title">
@@ -320,10 +323,73 @@
                         </div>
                     </div>
                     <div class="multi-hotel-results__hotel-list">
-    <!--                    <div class="no-hotels">There are currently no hotels matching your request.</div>-->
+                        <div class="hotel-list-item">
+                            <div class="promo-label">Sale</div>
+                            <div class="hotel-list-item__img col-4 col-lg-4 col-md-4 col-sm-5">
+                                <div class="slider">
+                                    <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                    <img src="../images/map.jpg"  alt="hotel-image"/>
+                                    <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                    <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                </div>
+                                <div class="navigation">
+                                    <button class="prev">
+                                        <img src="../images/icons/prev-arrow.svg" alt="">
+                                    </button>
+                                    <button class="next">
+                                        <img src="../images/icons/next-arrow.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="hotel-list-item__section col-8 col-lg-8 col-md-8 col-sm-7">
+                                <div class="hotel-list-item__info col-12 col-lg-8 col-md-8">
+                                    <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
+                                    <div class="hotel-rating">
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/full-star.svg" />
+                                        <img src="../images/icons/empty-star.svg" />
+                                    </div>
+                                    <div class="hotel-promo">
+                                        <span>PROMO.</span>
+                                        Special deal. Save 15%
+                                    </div>
+                                    <div class="hotel-distance">2600 Sloat Blvd, San Francisco, CA 94116 –
+                                        <span>0.11 miles</span>
+                                    </div>
+                                    <div class="hotel-phone">
+                                        <img src="../images/icons/phone.svg" alt="hotel-phone">
+                                        <a href="tel:+1-415-665-9000">415-665-9000</a>
+                                    </div>
+                                    <div class="hotel-review-rate">
+                                        <div class="score green">4.5</div>
+                                        <div class="desc">
+                                            <p class="desc-text">Excellent</p>
+                                            <p class="desc-reviews">248 reviews</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel-list-item__reserve col-12 col-lg-4 col-md-4">
+                                    <div class="price">
+                                        <span class="old-price">$250 103</span>
+                                        <span class="current-price">$200 103</span>
+                                        <span class="per">per night</span>
+                                        <div class="total-price">
+                                            <span>$400 206</span>
+                                            <span class="total">Total for 2 nights</span>
+                                            <span class="desc">Total Includes taxes & fees</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="hotel-list-item">
                             <div class="hotel-list-item__img col-4 col-lg-4 col-md-4 col-sm-5">
-                                <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                <div class="slider">
+                                    <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                </div>
                                 <div class="navigation">
                                     <a class="prev" href="#">
                                         <img src="../images/icons/prev-arrow.svg" alt="">
@@ -379,7 +445,9 @@
                         </div>
                         <div class="hotel-list-item">
                             <div class="hotel-list-item__img col-4 col-lg-4 col-md-4 col-sm-5">
-                                <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                <div class="slider">
+                                    <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
+                                </div>
                                 <div class="navigation">
                                     <a class="prev" href="#">
                                         <img src="../images/icons/prev-arrow.svg" alt="">
@@ -435,63 +503,9 @@
                         </div>
                         <div class="hotel-list-item">
                             <div class="hotel-list-item__img col-4 col-lg-4 col-md-4 col-sm-5">
-                                <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
-                                <div class="navigation">
-                                    <a class="prev" href="#">
-                                        <img src="../images/icons/prev-arrow.svg" alt="">
-                                    </a>
-                                    <a class="next" href="#">
-                                        <img src="../images/icons/next-arrow.svg" alt="">
-                                    </a>
+                                <div class="slider">
+                                    <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
                                 </div>
-                            </div>
-                            <div class="hotel-list-item__section col-8 col-lg-8 col-md-8 col-sm-7">
-                                <div class="hotel-list-item__info col-12 col-lg-8 col-md-8">
-                                    <h5 class="hotel-name">Palacio del Marques de San Felipe y Santiago de Bejucal</h5>
-                                    <div class="hotel-rating">
-                                        <img src="../images/icons/full-star.svg" />
-                                        <img src="../images/icons/full-star.svg" />
-                                        <img src="../images/icons/full-star.svg" />
-                                        <img src="../images/icons/full-star.svg" />
-                                        <img src="../images/icons/empty-star.svg" />
-                                    </div>
-                                    <div class="hotel-promo">
-                                        <span>PROMO.</span>
-                                        Special deal. Save 15%
-                                    </div>
-                                    <div class="hotel-distance">2600 Sloat Blvd, San Francisco, CA 94116 –
-                                        <span>0.11 miles</span>
-                                    </div>
-                                    <div class="hotel-phone">
-                                        <img src="../images/icons/phone.svg" alt="hotel-phone">
-                                        <span>415-665-9000</span>
-                                    </div>
-                                    <div class="hotel-review-rate">
-                                        <div class="score green">4.5</div>
-                                        <div class="desc">
-                                            <p class="desc-text">Excellent</p>
-                                            <p class="desc-reviews">248 reviews</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hotel-list-item__reserve col-12 col-lg-4 col-md-4">
-                                    <div class="price">
-                                        <span class="old-price">$250 103</span>
-                                        <span class="current-price">$200 103</span>
-                                        <span class="per">per night</span>
-                                        <div class="total-price">
-                                            <span>$400 206</span>
-                                            <span class="total">Total for 2 nights</span>
-                                            <span class="desc">Total Includes taxes & fees</span>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hotel-list-item">
-                            <div class="hotel-list-item__img col-4 col-lg-4 col-md-4 col-sm-5">
-                                <img src="../images/hotel-image.jpg"  alt="hotel-image"/>
                                 <div class="navigation">
                                     <a class="prev" href="#">
                                         <img src="../images/icons/prev-arrow.svg" alt="">

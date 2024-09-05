@@ -117,7 +117,8 @@
 
 header {
     display: flex;
-    padding: 16px 96px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
     justify-content: space-between;
     align-items: center;
 }
@@ -155,30 +156,18 @@ header .header-right .header-phone a {
 }
 
 @media (max-width: 1200px) {
-    header {
-        padding: 16px 80px !important;
-    }
-
     footer {
         padding: 40px 80px !important;
     }
 }
 
 @media (max-width: 992px) {
-    header {
-        padding: 16px 64px !important;
-    }
-
     footer {
         padding: 40px 64px !important;
     }
 }
 
 @media (max-width: 767px) {
-    header {
-        padding: 16px !important;
-    }
-
     header .header-logo {
         width: 191px !important;
         height: 12px !important;
