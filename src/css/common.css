@@ -141,11 +141,19 @@ header .header-right .header-title {
     gap: 12px;
 }
 
-header .header-right .header-reservations {
+header .header-right .header-title {
+    gap: 24px;
+}
+
+header .header-right .header-reservations, header .header-right .header-title .header-main-link {
     color: #003847;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
+}
+
+header .header-right .header-title .header-main-link {
+    cursor: pointer;
 }
 
 header .header-right .header-phone a {
@@ -498,6 +506,19 @@ div.text-primary {
     border-color: #ffffff !important;
 }
 
+
+.btn-tertiary-outline {
+    border-radius: 8px;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    background-color: inherit;
+}
+
+.btn-tertiary-outline:hover {
+    color: #333333;
+    background-color: #FFFFFF;
+    border: none;
+}
 
 @media (hover: hover) and (pointer: fine) {
     .btn-primary:hover {

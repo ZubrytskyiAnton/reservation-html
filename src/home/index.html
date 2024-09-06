@@ -1,0 +1,481 @@
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Reservation</title>
+    <link rel="shortcut icon" href="#"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+          integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/searchbox.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/home.css"/>
+    <link rel="stylesheet" href="../lib/raty/jquery.raty.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="module" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/home.js" type="module"></script>
+</head>
+<body>
+
+<!--HEADER-->
+
+<div class="header-container">
+    <header class="container">
+        <div class="d-flex align-items-center">
+            <div id="open-header-menu" class="menu-icon">
+                <img src="../images/icons/menu.svg" alt="menu-icon" tabindex="0"/>
+            </div>
+            <div id="close-header-menu" class="close-icon d-none">
+                <img src="../images/icons/close_black.svg" alt="close-icon" tabindex="0"/>
+            </div>
+            <a href="/"> <img src="../images/logo.png" alt="logo" width="310" height="20" class="header-logo"/></a>
+        </div>
+        <div class="header-right">
+            <div class="header-title main">
+                <a class="header-main-link">CUSTOMER SUPPORT</a>
+                <a class="header-main-link">MY RESERVATIONS</a>
+                <a class="mobile-phone campaign-phone" href="tel:844-670-8077"
+                   aria-label="Reservations.com Phone Number">
+                    <img src="../images/icons/phone_red.svg" height="20" width="20" alt="call us"/>
+                </a>
+            </div>
+        </div>
+
+        <!--MOBILE MENU-->
+        <div id="mobile-menu" class="main-mobile-menu d-none">
+            <div class="main-mobile-menu-item">
+                <a href="" class="main-mobile-menu-link">
+                    <img src="../images/icons/globe_red.svg" alt="globe-icon">
+                    Hotel Reservations
+                </a>
+            </div>
+            <div class="main-mobile-menu-item">
+                <a href="" class="main-mobile-menu-link">
+                    <img src="../images/icons/rent_car_black.svg" alt="rent-car-icon">
+                    Car Rentals
+                </a>
+            </div>
+            <div class="main-mobile-menu-item">
+                <a href="" class="main-mobile-menu-link">
+                    <img src="../images/icons/group_booking_black.svg" alt="group-booking-icon">
+                    Group Bookings
+                </a>
+            </div>
+            <div class="main-mobile-menu-links">
+                <a class="header-main-link">CUSTOMER SUPPORT</a>
+                <a class="header-main-link">MY RESERVATIONS</a>
+            </div>
+        </div>
+
+    </header>
+</div>
+
+<!--MAIN HERO-->
+
+<div class="main-content-wrapper">
+    <div class="container">
+        <div class="main-content">
+            <div class="main-content-header">
+                <a class="main-content-header-link hotel-link">
+                    <img src="../images/icons/globe.svg" alt="globe-icon">
+                    Hotel Reservations
+                </a>
+                <a class="main-content-header-link">
+                    <img src="../images/icons/rent_car.svg" alt="rent-car-icon">
+                    Car Rentals
+                </a>
+                <a class="main-content-header-link">
+                    <img src="../images/icons/group_booking.svg" alt="group-booking-icon">
+                    Group Bookings
+                </a>
+            </div>
+            <h1>Reserve Your Hotel</h1>
+            <span class="main-content-header-text">
+                    Reservations.com is an independent Online Travel Agency to help you
+select from over 500,000 hotels worldwide. Book online or call <a class="campaign-phone" href="tel:855-516-1090"> <span
+                    class="campaign-phone">855-516-1090</span></a>
+                </span>
+
+            <!--SEARCHBOX-->
+
+            <div class="main-content-searchbox">
+                <div class="searchbox">
+                    <div class="container-desktop section-container container">
+                        <div class="form-group overflow-hidden">
+                            <input class="form-control readonly-input filled" type="text" id="search-result-mobile"
+                                   autocomplete="off" inputmode="none" value="" readonly="readonly">
+                            <label></label>
+                            <img src="../images/icons/searchbox_pencil.svg" class="input-icon result-mobile" width="20"
+                                 height="20" alt="Map marker">
+                        </div>
+                        <form id="search-form" class="form-container" novalidate>
+                            <div class="form-group">
+                                <div class="position-relative overflow-hidden">
+                                    <input class="form-control" type="text" id="googlePlacesNew" name="googlePlaces"
+                                           data-val="true" required="required" data-val-required=""
+                                           aria-describedby="basic-addon3" autocomplete="off"
+                                           placeholder="Destination City, Airport or Hotel">
+                                    <label>Destination City, Airport or Hotel</label>
+                                    <img src="../images/icons/searchbox_map_marker.svg" id="map-marker"
+                                         class="input-icon" width="20" height="20" alt="Map marker">
+                                    <img id="clear-icon" src="../images/icons/x_circle_black.svg"
+                                         class="clear-icon black d-none" width="20" height="20" alt="Clear icon">
+                                    <img src="../images/icons/x_circle_gray.svg" class="clear-icon gray d-none pe-none"
+                                         width="20" height="20" alt="Clear icon">
+                                </div>
+                                <div class="pac-container d-none"></div>
+                            </div>
+
+                            <div class="form-group overflow-hidden">
+                                <input class="form-control readonly-input" type="text" id="date-range"
+                                       placeholder="Check in &amp; Check Out" required="required" data-val-required=""
+                                       autocomplete="off" inputmode="none" value="" readonly="readonly">
+                                <label>Check in & out date</label>
+                                <img src="../images/icons/searchbox_calendar.svg" class="input-icon" width="20"
+                                     height="20" alt="Map marker">
+                            </div>
+
+                            <div class="rooms-form-container">
+                                <div class="form-group overflow-hidden">
+                                    <input class="form-control readonly-input" type="text" id="check-in-out-date"
+                                           name="check-in-out" required="required" data-val="true" data-val-required=""
+                                           value="" placeholder="Rooms & guests" aria-label="Rooms" readonly="readonly">
+                                    <label>Rooms & guests</label>
+                                    <img src="../images/icons/searchbox_guest.svg" class="input-icon" width="20"
+                                         height="20" alt="Map marker">
+                                </div>
+
+                                <div id="rooms-form">
+                                    <div class="rooms-wrapper">
+                                        <div class="rooms-form-title">
+                                            <span>Rooms</span>
+                                            <img id="close-room-form-icon" src="../images/icons/close_black.svg"
+                                                 alt="close icon">
+                                        </div>
+                                        <div id="room-container">
+                                        </div>
+                                        <div class="room-form-btn-wrapper">
+                                            <button type="button" id="add-room" class="btn btn-secondary add-room">
+                                                <img src="../images/icons/add_new.svg" alt="icon"/>
+                                                Add room
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="room-form-btn-wrapper control">
+                                        <button id="form-enter-btn" class="btn btn-primary" type="button">Enter</button>
+                                        <button id="form-reset-btn" class="btn btn-secondary" type="button">Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="form-submit-btn" class="btn btn-primary" type="submit">Search hotels</button>
+                            <button id="form-close-btn" type="button" class="btn close-btn">
+                                <img src="../images/icons/close.svg" alt="close" width="16" height="16"/>
+                                CLOSE
+                            </button>
+                        </form>
+                        <button id="call-btn" class="btn btn-tertiary-outline">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.6 19.5C9.6 19.0029 10.0029 18.6 10.5 18.6H13.5C13.9971 18.6 14.4 19.0029 14.4 19.5C14.4 19.9971 13.9971 20.4 13.5 20.4H10.5C10.0029 20.4 9.6 19.9971 9.6 19.5Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.8 4.8C4.8 2.81177 6.41178 1.2 8.4 1.2H15.6C17.5882 1.2 19.2 2.81177 19.2 4.8V19.2C19.2 21.1882 17.5882 22.8 15.6 22.8H8.4C6.41178 22.8 4.8 21.1882 4.8 19.2V4.8ZM9.6 3V3.9C9.6 4.39705 10.0029 4.8 10.5 4.8H13.5C13.9971 4.8 14.4 4.39705 14.4 3.9V3H15.6C16.5941 3 17.4 3.80588 17.4 4.8V19.2C17.4 20.1941 16.5941 21 15.6 21H8.4C7.40589 21 6.6 20.1941 6.6 19.2V4.8C6.6 3.80588 7.40589 3 8.4 3H9.6Z" fill="white"/>
+                            </svg>
+
+                            <div class="text-wrapper">
+                                <span>CALL 844-670-8077</span>
+                                <span>Anytime to reserve by phone</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--WHY RESERVATIONS-->
+
+<div class="container">
+    <div class="main-advantages-wrapper">
+        <h2>WHY RESERVATION.COM?</h2>
+        <span id="desktop-text">The best features to help you find the best hotel.</span>
+        <span id="mobile-text">Reservations.com is an independent Online Travel Agency to help you select from over 500,000 hotels worldwide. Book online or call 855-516-1090</span>
+
+        <div class="main-advantages-cards">
+            <div class="main-advantages-card">
+                <div class="main-advantages-card-icon">
+                    <img src="../images/icons/main_receipt.svg" alt="icon"/>
+                </div>
+                <div>
+                    <p>Deals You'll Love</p>
+                    <span>Find great deals and offers for big savings on hotel room rates.</span>
+                </div>
+            </div>
+
+            <div class="main-advantages-card">
+                <div class="main-advantages-card-icon">
+                    <img src="../images/icons/main_phone.svg" alt="icon"/>
+                </div>
+                <div>
+                    <p>24/7 Phone Support</p>
+                    <span>A support team dedicated to customer success. We are always available to help.</span>
+                </div>
+            </div>
+
+            <div class="main-advantages-card">
+                <div class="main-advantages-card-icon">
+                    <img src="../images/icons/main_star.svg" alt="icon"/>
+                </div>
+                <div>
+                    <p>Top Hotel Selection</p>
+                    <span>Select from a wide selection of over 500,000 hotels in top destinations.</span>
+                </div>
+            </div>
+
+            <div class="main-advantages-card">
+                <div class="main-advantages-card-icon">
+                    <img src="../images/icons/main_shield_check.svg" alt="icon"/>
+                </div>
+                <div>
+                    <p>Easy & Secure</p>
+                    <span>Simple, easy and secure checkout process to confirm your booking in just a few minutes.</span>
+                </div>
+            </div>
+
+            <div class="main-advantages-card">
+                <div class="main-advantages-card-icon">
+                    <img src="../images/icons/main_checkbox_circle.svg" alt="icon"/>
+                </div>
+                <div>
+                    <p>Instant Confirmation</p>
+                    <span>Peace of mind with instant booking confirmation. Book now & relax.</span>
+                </div>
+            </div>
+
+            <div class="main-advantages-card">
+                <div class="main-advantages-card-icon">
+                    <img src="../images/icons/main_emotion_smile.svg" alt="icon"/>
+                </div>
+                <div>
+                    <p>Travel Sentiments</p>
+                    <span>Helpful meta-reviews and travel sentiments from other travelers just like you.</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-us-link">
+            <a href="">MORE ABOUT US</a>
+        </div>
+    </div>
+
+    <!--    TOP DESTINATIONS-->
+
+    <div class="main-destinations">
+        <h3>Top destinations</h3>
+
+        <div id="destinations-desktop" class="main-destinations-links">
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+        </div>
+
+
+        <div id="destinations-mobile" class="main-destinations-links">
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+            <div class="main-destinations-links-item">
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+                <a href="">Hotels in Las Vegas</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!--    FOOTER LINKS-->
+
+
+<footer>
+    <div class="container">
+        <div class="footer-main-container">
+            <div class="footer-info">
+                <a href="/"> <img src="../images/icons/footer_logo.svg" alt="logo" width="310" height="21"
+                                  class=""/></a>
+                <div class="info-wrapper">
+                    <span class="info-title">Call us for Bookings:</span>
+                    <a class="info-link" href="tel:855-516-1090">855-516-1090</a>
+                </div>
+                <div class="info-wrapper">
+                    <span class="info-title">Send an Email:</span>
+                    <a class="info-link">support@reservations.com</a>
+                </div>
+                <div class="socials">
+                    <a href="/"> <img src="../images/icons/facebook.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/twitter.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/pinterest.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/youtube.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/linkedIn.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/instagram.svg" alt="logo" width="24" height="24"/></a>
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-links-item">
+                    <h5 class="footer-links-item-title">Hotel reservations</h5>
+
+                    <div class="footer-links">
+                        <a href="">Manage Reservation</a>
+                        <a href="">Customer Support</a>
+                        <a href="">Car Rentals</a>
+                        <a href="">Group Hotels</a>
+                        <a href="">Group Car Rentals</a>
+                        <a href="">Terms of Service</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Sitemap</a>
+
+                    </div>
+
+                </div>
+                <div class="footer-links-item">
+                    <h5 class="footer-links-item-title">Company</h5>
+                    <div class="footer-links">
+                        <a href="">About Us</a>
+                        <a href="">Corporate Culture</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Customer Success</a>
+                        <a href="">Mobile</a>
+                    </div>
+                </div>
+                <div class="footer-links-item">
+                    <h5 class="footer-links-item-title">Community</h5>
+                    <div class="footer-links">
+                        <a href="">Runway Suitcase Blog</a>
+                        <a href="">Giving at Reservations.com</a>
+                        <a href="">Media Coverage</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer-top col-12">
+        <div class="container">
+            <p>To make a new reservation call: <span>855-516-1090</span></p>
+            <p>If you are a person who needs an accessibility accommodation in order to utilize this Site and our
+                Services, we offer certain assistance that may help.
+                <br>Please call our 24/7 Customer Call Center at <span>1800-916-4339</span></p>
+            <a href="#">Click here to Cancel your Reservation or Resend Confirmation Email</a>
+            <p class="additional-help large-section">
+                Need additional help?
+                <a href="#">Need customer service</a>
+            </p>
+            <p class="large-section">
+                <span>Reservations.com - Your Independent Travel Network</span>
+                <span>Hotel Non-Affiliation – Our Independence is Your Advantage</span>
+                <span>Connecting Travelers to Expectation Deals</span>
+            </p>
+            <p class="large-section">
+                <span>About Reservations.com</span>
+                <span>All Destinations</span>
+                <span>Hotels by State</span>
+                <span>Customer Success</span>
+                <span>Press & Media</span>
+                <span>Do not sell my personal info</span>
+            </p>
+            <p class="social">
+                    <span>You can connect with us on
+                        <a href="#">Facebook</a>,
+                        <a href="#">Twitter</a>,
+                        <a href="#">YouTube</a>,
+                        <a href="#">Instagram</a>,
+                        <a href="#">LinkedIn</a> and
+                        <a href="#">Pinterest</a>
+                    </span>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom col-12">
+        <div class="container">
+            <div class="currency">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>United States - USD ($)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="footer-nav">
+                <a href="#">Terms of service</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="copyright">
+                © 2024 Reservations.com. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
