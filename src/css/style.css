@@ -63,6 +63,7 @@
     top: calc(50% - 24px);
     left: calc(50% - 70px);
     border: none;
+    height: 36px;
 }
 
 .left-side-map img {
@@ -71,7 +72,7 @@
 }
 
 .left-side-map button:hover {
-    background: #0b5ed7;
+    background: #00A7D8;
     color: white;
 }
 .left-sidebar-top-rating {
@@ -94,6 +95,11 @@
 
 .left-sidebar-pricing .ui-slider {
     margin-bottom: 18px;
+}
+
+.left-sidebar-nearby-landmark .form-check-input:checked[type=checkbox] {
+    background-color: #7749F8;
+    border-color: #7749F8;
 }
 
 .ui-slider-horizontal {
@@ -365,7 +371,6 @@
     padding: 20px;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
     border-right: 1px solid #D2D7D8;
 }
 
@@ -373,7 +378,6 @@
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .hotel-list-item__info .hotel-rating {
@@ -733,6 +737,11 @@ footer .footer-top .social a {
     align-items: center;
 }
 
+.map-modal #map .custom-map-marker-content.active {
+    background: #333;
+    color: #fff;
+}
+
 .map-modal .modal-header .back {
     background: white;
     font-size: 14px;
@@ -979,6 +988,11 @@ map-modal .modal-header .close-modal {
 
     .mobile-sorting .sort-checkboxes {
         margin-left: 1.5em;
+    }
+
+    .mobile-sorting .sort-checkboxes .form-check-input:checked[type=checkbox] {
+        background-color: #7749F8;
+        border-color: #7749F8;
     }
 
     .mobile-sorting .sort-checkboxes .form-check {
