@@ -58,6 +58,18 @@ header .menu-icon {
     text-transform: uppercase;
 }
 
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
 .main-content-header-text {
     color: #FFFFFF;
     text-align: center;
@@ -66,6 +78,7 @@ header .menu-icon {
     line-height: 42px;
     max-width: 1000px;
     margin: 20px auto 0;
+    animation-delay: 300ms;
 }
 
 .main-content-header-text a {
@@ -222,21 +235,23 @@ header .menu-icon {
     flex-direction: column;
     row-gap: 8px;
     width: 18.6%;
-    overflow: hidden;
+}
+
+.main-destinations-link{
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.main-destinations-links-item a {
-    display: block;
+.main-destinations-links-item .main-destinations-link a {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
     color: #006E8E;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+}
+
+.main-destinations-links-item .main-destinations-link a:hover {
+    border-bottom: 1px solid #006E8E;
 }
 
 .main-destinations-links-item:not(:first-child) {
@@ -281,7 +296,7 @@ header .menu-icon {
     color: #C5C5C5;
 }
 
-.info-wrapper .info-link {
+.info-wrapper .info-link, .info-wrapper .info-text{
     display: inline-block;
     margin-top: 4px;
     font-size: 14px;
@@ -289,6 +304,11 @@ header .menu-icon {
     line-height: 20px;
     color: #FFFFFF;
     text-decoration: none !important;
+    width: fit-content;
+}
+
+.info-wrapper .info-link:hover{
+    text-decoration: underline !important;
 }
 
 .socials {
@@ -341,6 +361,10 @@ header .menu-icon {
     white-space: nowrap;
 }
 
+.footer-links a:hover {
+    text-decoration: underline !important;
+}
+
 .footer-links a:not(:first-child) {
     margin-top: 8px;
 }
@@ -371,13 +395,15 @@ header .menu-icon {
     }
 
     .footer-links-container {
-        flex-direction: column;
         row-gap: 24px;
         margin-top: 48px;
+        flex-wrap: wrap;
+        column-gap: 20px;
     }
 
     .footer-links-item {
-        width: 100%;
+        width: calc(50% - 10px);
+        min-width: max-content;
     }
 
     .footer-links-item:not(:first-child) {
@@ -655,7 +681,19 @@ header .menu-icon {
     .main-destinations-links-item:not(:first-child) {
         margin-left: 0;
     }
-
 }
 
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
