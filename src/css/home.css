@@ -325,20 +325,21 @@ header .menu-icon {
 
 .footer-links-container {
     display: flex;
+    justify-content: space-between;
     width: 100%;
 }
 
 .footer-links-item {
-    width: 34%;
+    /*width: 34%;*/
 }
 
 .footer-links-item:not(:first-child) {
-    margin-left: 24px;
+    /*margin-left: 24px;*/
 }
 
 .footer-links-item:last-of-type {
-    width: fit-content;
-    margin-left: auto;
+    /*width: fit-content;*/
+    /*margin-left: auto;*/
 }
 
 .footer-links-item .footer-links-item-title {

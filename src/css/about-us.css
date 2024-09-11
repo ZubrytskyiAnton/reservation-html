@@ -353,6 +353,10 @@ h2 {
     font-weight: 600;
 }
 
+.about-article-content .about-article-title a {
+    color: inherit;
+}
+
 .about-article-content .about-article-text {
     display: -webkit-box;
     -webkit-line-clamp: 2;
