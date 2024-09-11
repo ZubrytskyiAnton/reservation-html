@@ -1,0 +1,581 @@
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Reservation</title>
+    <link rel="shortcut icon" href="#"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+          integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/searchbox.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/home.css"/>
+    <link rel="stylesheet" href="../css/about-us.css"/>
+    <link rel="stylesheet" href="../lib/raty/jquery.raty.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="module" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/about-us.js" type="module"></script>
+    <script src="../js/home.js" type="module"></script>
+</head>
+<body>
+
+<!--HEADER-->
+
+<div class="header-container">
+    <header class="container">
+        <div class="d-flex align-items-center">
+            <div id="open-header-menu" class="menu-icon">
+                <img src="../images/icons/menu.svg" alt="menu-icon" tabindex="0"/>
+            </div>
+            <div id="close-header-menu" class="close-icon d-none">
+                <img src="../images/icons/close_black.svg" alt="close-icon" tabindex="0"/>
+            </div>
+            <a href="/"> <img src="../images/logo.png" alt="logo" width="310" height="20" class="header-logo"/></a>
+        </div>
+        <div class="header-right">
+            <div class="header-title main">
+                <a class="header-main-link">CUSTOMER SUPPORT</a>
+                <a class="header-main-link">MY RESERVATIONS</a>
+                <a class="mobile-phone campaign-phone" href="tel:844-670-8077"
+                   aria-label="Reservations.com Phone Number">
+                    <img src="../images/icons/phone_red.svg" height="20" width="20" alt="call us"/>
+                </a>
+            </div>
+        </div>
+
+        <!--MOBILE MENU-->
+        <div id="mobile-menu" class="main-mobile-menu d-none">
+            <div class="main-mobile-menu-item">
+                <a href="" class="main-mobile-menu-link">
+                    <img src="../images/icons/globe_red.svg" alt="globe-icon">
+                    Hotel Reservations
+                </a>
+            </div>
+            <div class="main-mobile-menu-item">
+                <a href="" class="main-mobile-menu-link">
+                    <img src="../images/icons/rent_car_black.svg" alt="rent-car-icon">
+                    Car Rentals
+                </a>
+            </div>
+            <div class="main-mobile-menu-item">
+                <a href="" class="main-mobile-menu-link">
+                    <img src="../images/icons/group_booking_black.svg" alt="group-booking-icon">
+                    Group Bookings
+                </a>
+            </div>
+            <div class="main-mobile-menu-links">
+                <a class="header-main-link">CUSTOMER SUPPORT</a>
+                <a class="header-main-link">MY RESERVATIONS</a>
+            </div>
+        </div>
+
+    </header>
+</div>
+
+<!--MAIN HERO-->
+
+<div class="container">
+    <div class="about-hero">
+        <h1 class="about-hero-title">Our mission is to bring the human-touch back into the world of online travel</h1>
+        <span class="about-hero-text subtitle-text">At Reservations.com we are passionate about our vision to provide all travelers with personalized experiential travel planning and redefine the booking and travel planning experience for today’s travelers by providing personalized services, at scale.</span>
+    </div>
+</div>
+<div class="about-hero-img">
+    <img src="../images/about_us_hero.png" alt="photo">
+</div>
+
+
+<!--INFO CONTENT-->
+
+<div class="about-info-section container">
+    <div class="about-info-content">
+        <div class="about-info-main">
+            <div class="about-info-category">Assistance</div>
+            <h2 class="about-info-title">Our customers are our top
+                priority.<span> We are focused on your success!</span>
+            </h2>
+            <span class="about-info-text subtitle-text">At a time when other companies are scaling back phone support, Reservations.com is investing to bring back the human element and expand its customer support organization to offer round the clock, personalized phone assistance.</span>
+            <div class="about-info-offers">
+                <div class="main-advantages-card">
+                    <div class="main-advantages-card-icon">
+                        <img src="../images/icons/main_phone.svg" alt="icon"/>
+                    </div>
+                    <div>
+                        <p>24/7 Phone Support</p>
+                        <span>A support team dedicated to customer success. We are always available to help.</span>
+                    </div>
+                </div>
+                <div class="main-advantages-card">
+                    <div class="main-advantages-card-icon">
+                        <img src="../images/icons/room_service_cart.svg" alt="icon"/>
+                    </div>
+                    <div>
+                        <p>Concierge Service</p>
+                        <span>Our highly trained team is prepared to guide you through the booking process.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-link">
+                <a href="">To customer success center</a>
+            </div>
+        </div>
+        <div class="about-info-img">
+            <img src="../images/about_us_assistance.jpg" alt="assistance">
+        </div>
+    </div>
+
+
+    <div class="about-info-content">
+        <div class="about-info-main">
+            <div class="about-info-category">Customer Success</div>
+            <h2 class="about-info-title">Travel is our DNA</h2>
+            <span class="about-info-text subtitle-text">Reservations.com is on the mission to bring the human-touch back into the world of online travel, to enhance our customer's experience and take them places they have never been. We are passionate about redefining the booking and planning experience for today's travelers.</span>
+            <div class="about-info-links-wrapper">
+                <div class="about-us-link">
+                    <a href="">More about our culture</a>
+                </div>
+                <div class="about-us-link">
+                    <a href="">Join the team</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="about-info-img">
+            <img src="../images/about_us_customer.jpg" alt="assistance">
+        </div>
+    </div>
+</div>
+
+
+
+<!--AMOUNT SECTION-->
+
+<div class="about-amount-container">
+    <div class="container">
+        <div class="about-amount">
+            <div class="about-amount-content">
+                <div class="about-amount-content-value">
+                    <span data-target="500">0</span>K
+                </div>
+                <span class="about-amount-content-name">hotels worldwide</span>
+            </div>
+            <div class="about-amount-content">
+                <div class="about-amount-content-value">
+                    <span data-target="500">0</span>+
+                </div>
+                <span class="about-amount-content-name">travel advisors</span>
+            </div>
+            <div class="about-amount-content">
+                <div class="about-amount-content-value">
+                    <span data-target="24">0</span>/7
+                </div>
+                <span class="about-amount-content-name">live phone support</span>
+            </div>
+            <div class="about-amount-content">
+                <div class="about-amount-content-value">
+                    <span data-target="5000">0</span>+
+                </div>
+                <span class="about-amount-content-name">top destinations</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--FAQ-->
+
+<div class="container about-faq-container">
+    <h2 class="about-faq-title">Frequently Asked Questions (FAQs)</h2>
+    <span class="about-faq-text subtitle-text">We’re here to help!</span>
+    <div class="about-faq-content">
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                    Where can I get a receipt or copy of my Hotel Booking Confirmation?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                    How do I cancel my reservation?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                   Where can I get information about any Travel Advisories related to my trip?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                    What should I do if I'm having trouble booking online?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                   What information or documents will I need to check-in to my hotel?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                    Do you operate or own the hotels listed on your website?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                   How do I find the best deals and get the cheapest hotel rates?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+        <div class="about-faq-item">
+            <div class="about-faq-question">
+                <span>
+                   How do I know if my booking was successful?
+                </span>
+                <img src="../images/icons/faq_arrow.svg" alt="arrow-icon"/>
+            </div>
+            <div class="about-faq-answer-wrapper">
+                <div class="about-faq-answer">
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                    If you would like to cancel your reservation you may do so in our <a href="">Manage Your
+                    Reservation</a>
+                    section, or by phone by calling customer support at 855-516-1090. Please check your cancellation
+                    policy
+                    located on the bottom of your confirmation email. In some cases, we may be able to help you find
+                    alternative room types, dates, or hotels to ensure your stay will match your updated needs.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-us-link">
+        <a href="">GET SUPPORT</a>
+    </div>
+</div>
+
+
+<!--QUOTE-->
+
+<div class="container">
+    <div class="about-quote">
+    <span class="about-quote-text">True experience is not a passive activity - <br/>
+It is participatory, immersive and fun!</span>
+    </div>
+</div>
+
+
+<!--ARTICLES-->
+
+<div class="container about-articles">
+    <h2>Latest from our blog The Runaway Suitcase</h2>
+    <span class="about-articles-text subtitle-text">All those who wander are not lost!</span>
+    <div class="about-articles-container">
+
+        <div class="about-article">
+            <div class="about-article-img">
+                <img src="../images/about_article_1.jpg" alt="photo"/>
+            </div>
+            <div class="about-article-content">
+                <p class="about-article-title">The Ultimate Bucket-List For Every Soul Traveler</p>
+                <span class="about-article-text">Every traveler has a bucket list. They are created to seek new experiences</span>
+            </div>
+        </div>
+        <div class="about-article">
+            <div class="about-article-img">
+                <img src="../images/about_article_2.png" alt="photo"/>
+            </div>
+            <div class="about-article-content">
+                <p class="about-article-title">5 Top destinations for every Adventurist</p>
+                <span class="about-article-text">If you are the roaring adventurer archetype among travelers, and you like If you are the roaring adventurer archetype among travelers, and you like...</span>
+            </div>
+        </div>
+        <div class="about-article">
+            <div class="about-article-img">
+                <img src="../images/about_article_3.jpg" alt="photo"/>
+            </div>
+            <div class="about-article-content">
+                <p class="about-article-title">Top Travel Destinations</p>
+                <span class="about-article-text">Every traveler has a bucket list. They are created to seek new experiences Every traveler has a bucket list. They are created to seek new experiences</span>
+            </div>
+        </div>
+        <div class="about-article">
+            <div class="about-article-img">
+                <img src="../images/about_article_4.jpg" alt="photo"/>
+            </div>
+            <div class="about-article-content">
+                <p class="about-article-title">Travelers Spotlight in Dusseldorf, Germany</p>
+                <span class="about-article-text">Every traveler has a bucket list. They are created to seek new experiences</span>
+            </div>
+        </div>
+    </div>
+    <div class="about-us-link">
+        <a href="">Read more</a>
+    </div>
+</div>
+
+
+<!--TEAM-->
+
+<div class="about-team-container container">
+    <div class="about-team-img-container">
+        <img src="../images/about_team_1.png" alt="photo"/>
+        <img src="../images/about_team_2.png" alt="photo"/>
+        <img src="../images/about_team_3.png" alt="photo"/>
+        <img src="../images/about_team_4.png" alt="photo"/>
+    </div>
+    <div class="about-team-content">
+        <div class="about-info-category">Team</div>
+        <h2 class="about-info-title">OUR team & culture</h2>
+        <span class="about-info-text subtitle-text">We work hard and play hard. While we have passion for all things hotels, we also have a passion for our family, friends, and most importantly ourselves. Here at Reservations.com, we keep sound work hours so that you pursue your passions outside of the bright red walls.</span>
+        <div class="about-us-link">
+            <a href="">Join Us</a>
+        </div>
+    </div>
+</div>
+
+<!--    FOOTER LINKS-->
+
+<footer>
+    <div class="container">
+        <div class="footer-main-container">
+            <div class="footer-info">
+                <a href="/"> <img src="../images/icons/footer_logo.svg" alt="logo" width="310" height="21"
+                                  class=""/></a>
+                <div class="info-wrapper">
+                    <span class="info-title">Call us for Bookings:</span>
+                    <a class="info-link" href="tel:855-516-1090">855-516-1090</a>
+                </div>
+                <div class="info-wrapper">
+                    <span class="info-title">Send an Email:</span>
+                    <span class="info-text">support@reservations.com</span>
+                </div>
+                <div class="socials">
+                    <a href="/"> <img src="../images/icons/facebook.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/twitter.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/pinterest.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/youtube.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/linkedIn.svg" alt="logo" width="24" height="24"/></a>
+                    <a href="/"> <img src="../images/icons/instagram.svg" alt="logo" width="24" height="24"/></a>
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-links-item">
+                    <h5 class="footer-links-item-title">Hotel reservations</h5>
+
+                    <div class="footer-links">
+                        <a href="">Manage Reservation</a>
+                        <a href="">Customer Support</a>
+                        <a href="">Car Rentals</a>
+                        <a href="">Group Hotels</a>
+                        <a href="">Group Car Rentals</a>
+                        <a href="">Terms of Service</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Sitemap</a>
+
+                    </div>
+
+                </div>
+                <div class="footer-links-item">
+                    <h5 class="footer-links-item-title">Company</h5>
+                    <div class="footer-links">
+                        <a href="">About Us</a>
+                        <a href="">Corporate Culture</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Customer Success</a>
+                        <a href="">Mobile</a>
+                    </div>
+                </div>
+                <div class="footer-links-item">
+                    <h5 class="footer-links-item-title">Community</h5>
+                    <div class="footer-links">
+                        <a href="">Runway Suitcase Blog</a>
+                        <a href="">Giving at Reservations.com</a>
+                        <a href="">Media Coverage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-top col-12">
+        <div class="container">
+            <p>To make a new reservation call: <span>855-516-1090</span></p>
+            <p>If you are a person who needs an accessibility accommodation in order to utilize this Site and our
+                Services, we offer certain assistance that may help.
+                <br>Please call our 24/7 Customer Call Center at <span>1800-916-4339</span></p>
+            <a href="#">Click here to Cancel your Reservation or Resend Confirmation Email</a>
+            <p class="additional-help large-section">
+                Need additional help?
+                <a href="#">Need customer service</a>
+            </p>
+            <p class="large-section">
+                <span>Reservations.com - Your Independent Travel Network</span>
+                <span>Hotel Non-Affiliation – Our Independence is Your Advantage</span>
+                <span>Connecting Travelers to Expectation Deals</span>
+            </p>
+            <p class="large-section">
+                <span>About Reservations.com</span>
+                <span>All Destinations</span>
+                <span>Hotels by State</span>
+                <span>Customer Success</span>
+                <span>Press & Media</span>
+                <span>Do not sell my personal info</span>
+            </p>
+            <p class="social">
+                    <span>You can connect with us on
+                        <a href="#">Facebook</a>,
+                        <a href="#">Twitter</a>,
+                        <a href="#">YouTube</a>,
+                        <a href="#">Instagram</a>,
+                        <a href="#">LinkedIn</a> and
+                        <a href="#">Pinterest</a>
+                    </span>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom col-12">
+        <div class="container">
+            <div class="currency">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>United States - USD ($)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="footer-nav">
+                <a href="#">Terms of service</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="copyright">
+                © 2024 Reservations.com. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

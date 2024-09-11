@@ -120,15 +120,15 @@ header .menu-icon {
     margin-top: 100px;
 }
 
-.main-advantages-wrapper #desktop-text{
+.main-advantages-wrapper #desktop-text {
     display: block;
 }
 
-.main-advantages-wrapper #mobile-text{
+.main-advantages-wrapper #mobile-text {
     display: none;
 }
 
-.main-advantages-wrapper .about-us-link {
+.about-us-link {
     margin-top: 64px;
     font-weight: 600;
     font-size: 14px;
@@ -136,9 +136,10 @@ header .menu-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 
-.main-advantages-wrapper .about-us-link a {
+.about-us-link a {
     border-bottom: 1px solid #178CAD;
     color: #178CAD;
 }
@@ -178,6 +179,8 @@ header .menu-icon {
     border-radius: 100px;
     width: 80px;
     height: 80px;
+    min-width: 80px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +240,7 @@ header .menu-icon {
     width: 18.6%;
 }
 
-.main-destinations-link{
+.main-destinations-link {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -296,7 +299,7 @@ header .menu-icon {
     color: #C5C5C5;
 }
 
-.info-wrapper .info-link, .info-wrapper .info-text{
+.info-wrapper .info-link, .info-wrapper .info-text {
     display: inline-block;
     margin-top: 4px;
     font-size: 14px;
@@ -307,7 +310,7 @@ header .menu-icon {
     width: fit-content;
 }
 
-.info-wrapper .info-link:hover{
+.info-wrapper .info-link:hover {
     text-decoration: underline !important;
 }
 
@@ -371,6 +374,7 @@ header .menu-icon {
 
 
 @media (max-width: 991px) {
+
     /*FOOTER*/
     .footer-main-container {
         margin-bottom: 32px;
@@ -532,7 +536,6 @@ header .menu-icon {
 
 
     /*SEARCHBOX*/
-
     .main-content-searchbox #form-close-btn {
         display: none !important;
     }
@@ -540,6 +543,7 @@ header .menu-icon {
     .main-content-searchbox .searchbox #form-submit-btn {
         max-width: 100%;
     }
+
     .main-content-searchbox {
         margin-top: 36px;
         border-radius: 16px;
@@ -596,11 +600,11 @@ header .menu-icon {
         margin-top: 64px;
     }
 
-    .main-advantages-wrapper #desktop-text{
+    .main-advantages-wrapper #desktop-text {
         display: none;
     }
 
-    .main-advantages-wrapper #mobile-text{
+    .main-advantages-wrapper #mobile-text {
         display: block;
     }
 
