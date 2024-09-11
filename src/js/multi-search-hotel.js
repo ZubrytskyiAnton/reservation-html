@@ -75,7 +75,14 @@ $(document).ready(function() {
         className: "custom-map-marker",
         html: `<div class="custom-map-marker-content">$202</div>`
     });
+    const mapMarker2 = L.divIcon({
+        className: "custom-map-marker active",
+        html: `<div class="custom-map-marker-content active">$210</div>`
+    });
     L.marker([51.505, -0.09], { icon: mapMarker }).addTo(map).on('click', function(e) {
+        // TODO: Change center of map and hotel card when click on it
+    });
+    L.marker([51.508, -0.12], { icon: mapMarker2 }).addTo(map).on('click', function(e) {
         // TODO: Change center of map and hotel card when click on it
     })
 

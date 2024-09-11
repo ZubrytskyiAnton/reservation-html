@@ -1,0 +1,677 @@
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.subtitle-text {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #333333;
+}
+
+/*MAIN HERO*/
+
+.about-hero {
+    padding: 80px 96px 88px;
+}
+
+.about-hero-title {
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 1112px;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: center;
+    color: #333333;
+}
+
+.about-hero-text {
+    display: block;
+    text-align: center;
+    margin: 20px auto 0;
+    max-width: 1112px;
+}
+
+.about-hero-img {
+    width: 100%;
+    height: 468px;
+}
+
+.about-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*INFO CONTENT*/
+
+.about-info-section {
+    margin-top: 80px;
+}
+
+.about-info-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 82px;
+}
+
+.about-info-section .about-info-content:nth-child(2) {
+    flex-direction: row-reverse;
+    margin-top: 128px;
+    justify-content: flex-end;
+}
+
+.about-info-section .about-info-content:nth-child(2) .about-info-main {
+    max-width: 612px;
+}
+
+.about-info-category {
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    border: 1px solid #D9D9D9;
+    border-radius: 24px;
+    color: #3170FE;
+}
+
+.about-info-title {
+    margin-top: 32px;
+}
+
+.about-info-text {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.about-info-offers {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.about-info-offers .main-advantages-card {
+    display: flex;
+    column-gap: 16px;
+    max-width: 390px;
+}
+
+.about-info-offers .main-advantages-card p {
+    margin-top: 0;
+}
+
+.about-info-offers .main-advantages-card span {
+    margin-top: 8px;
+}
+
+.about-info-offers .main-advantages-card * {
+    text-align: left;
+}
+
+.about-info-content .about-us-link {
+    width: fit-content;
+    margin-top: 32px;
+}
+
+.about-info-content .about-info-img {
+    min-width: 530px;
+    max-width: 530px;
+    height: 530px;
+}
+
+.about-info-content .about-info-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+.about-info-content .about-info-main {
+    max-width: 502px;
+}
+
+.about-info-content .about-info-links-wrapper {
+    display: flex;
+    column-gap: 16px;
+}
+
+
+/*AMOUNT SECTION*/
+
+.about-amount-container {
+    background-color: #F4F6F8;
+}
+
+.about-amount {
+    margin-top: 100px;
+    padding: 80px 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.about-amount .about-amount-content {
+    flex: 1;
+}
+
+.about-amount .about-amount-content .about-amount-content-value {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
+}
+
+.about-amount .about-amount-content * {
+    color: #333333;
+}
+
+.about-amount .about-amount-content .about-amount-content-name {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*FAQ*/
+
+.about-faq-container {
+    margin-top: 80px;
+}
+
+.about-faq-container .about-faq-title {
+    color: #333333;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-faq-container .about-faq-text {
+    color: #333333;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.about-faq-container .about-faq-content {
+    max-width: 824px;
+    margin: 48px auto 0;
+}
+
+.about-faq-item {
+    border-top: 1px solid #EFEFEF;
+}
+
+.about-faq-item .about-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 20px;
+    cursor: pointer;
+}
+
+
+.about-faq-item .about-faq-question img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.about-faq-item .about-faq-question img.rotate {
+    transform: rotate(180deg);
+}
+
+.about-faq-item .about-faq-question span {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #003847;
+}
+
+.about-faq-item .about-faq-answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.about-faq-answer {
+    padding: 0 0 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.about-faq-item .about-faq-answer a {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #178CAD;
+}
+
+.about-faq-container .about-us-link {
+    margin-top: 48px;
+}
+
+
+/*QUOTE*/
+
+.about-quote {
+    margin-top: 120px;
+    border-radius: 16px;
+    background-color: #ED4E4A;
+    padding: 40px 0;
+}
+
+.about-quote .about-quote-text {
+    display: block;
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 908px;
+}
+
+
+/*ARTICLES*/
+
+.about-articles {
+    margin-top: 120px;
+}
+
+.about-articles h2 {
+    text-align: center;
+}
+
+.about-articles .about-articles-text {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.about-articles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.about-article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.about-article .about-article-img {
+    width: 100%;
+    height: 210px;
+}
+
+.about-article .about-article-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.about-article-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-top: 20px;
+    row-gap: 10px;
+    color: #333333;
+}
+
+.about-article-content .about-article-title {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.about-article-content .about-article-title a {
+    color: inherit;
+}
+
+.about-article-content .about-article-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: auto;
+}
+
+.about-articles .about-us-link {
+    margin-top: 48px;
+}
+
+.about-articles .about-us-link a {
+    width: fit-content;
+}
+
+
+/*TEAM*/
+.about-team-container {
+    margin-top: 128px;
+    display: flex;
+    align-items: center;
+    column-gap: 82px;
+    margin-bottom: 100px;
+}
+
+.about-team-content .about-info-text {
+    max-width: 90%;
+}
+
+.about-team-content .about-us-link {
+    margin-top: 40px;
+    width: fit-content;
+}
+
+.about-team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 176px 330px;
+    gap: 24px;
+}
+
+.about-team-img-container img {
+    width: 256px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.about-team-img-container img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    height: 176px;
+}
+
+.about-team-img-container img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    height: 330px;
+}
+
+.about-team-img-container img:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 330px;
+}
+
+.about-team-img-container img:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    height: 176px;
+}
+
+
+@media (max-width: 991px) {
+
+    /*INFO CONTENT*/
+    .about-info-section {
+        margin-top: 64px;
+    }
+
+    .about-info-content {
+        flex-direction: column;
+        justify-content: initial;
+        align-items: initial;
+    }
+
+    .about-info-section .about-info-content:nth-child(1) {
+        flex-direction: column-reverse;
+    }
+
+    .about-info-section .about-info-content:nth-child(2) {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+    }
+
+    .about-info-section .about-info-content:nth-child(2) .about-info-main {
+        max-width: 100%;
+    }
+
+    .about-info-main .about-info-category {
+        margin: 32px 0 auto;
+    }
+
+    .about-info-title {
+        margin-top: 24px;
+    }
+
+    .about-info-text {
+        margin-top: 12px;
+    }
+
+    .about-info-offers {
+        margin-top: 24px;
+    }
+
+    .about-info-offers .main-advantages-card {
+        max-width: 100%;
+    }
+
+    .about-info-offers .main-advantages-card p {
+        margin-top: 0;
+    }
+
+    .about-info-offers .main-advantages-card span {
+        margin-top: 4px;
+    }
+
+    .about-info-content .about-info-img {
+        width: 100%;
+        min-width: 100%;
+        height: 280px;
+    }
+
+    .about-info-content .about-info-main {
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-info-content .about-info-links-wrapper {
+        flex-direction: column;
+        row-gap: 16px;
+        margin-top: 32px;
+        align-items: center;
+    }
+
+    .about-info-content .about-info-links-wrapper .about-us-link {
+        margin-top: 0;
+    }
+
+
+    /*TEAM*/
+    .about-team-container {
+        margin-top: 80px;
+        flex-direction: column;
+        row-gap: 32px;
+        margin-bottom: 56px;
+    }
+
+    .about-team-content .about-info-text {
+        max-width: 100%;
+    }
+
+    .about-team-content .about-us-link {
+        margin-top: 32px;
+    }
+
+    .about-team-img-container {
+        grid-template-rows: 120px 225px;
+        gap: 16px;
+    }
+
+    .about-team-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-team-img-container img {
+        width: 100%;
+    }
+
+    .about-team-img-container img:nth-child(1) {
+        height: 120px;
+    }
+
+    .about-team-img-container img:nth-child(2) {
+        height: 225px;
+    }
+
+    .about-team-img-container img:nth-child(3) {
+        height: 225px;
+    }
+
+    .about-team-img-container img:nth-child(4) {
+        height: 120px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .subtitle-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /*MAIN HERO*/
+    .about-hero {
+        padding: 40px 0 0;
+    }
+
+    .about-hero-title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .about-hero-text {
+        margin: 12px auto 0;
+    }
+
+    .about-hero-img {
+        display: none;
+    }
+
+
+    /*AMOUNT SECTION*/
+    .about-amount {
+        margin-top: 48px;
+        padding: 48px;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .about-amount .about-amount-content {
+        flex: 1;
+    }
+
+    .about-amount .about-amount-content .about-amount-content-name {
+        margin-top: 4px;
+    }
+
+
+    /*FAQ*/
+    .about-faq-container {
+        margin-top: 48px;
+    }
+
+    .about-faq-container .about-faq-content {
+        margin: 40px auto 0;
+    }
+
+    .about-faq-item .about-faq-question {
+        padding: 12px 0;
+        column-gap: 15px;
+        align-items: initial;
+    }
+
+    .about-faq-item .about-faq-question img {
+        position: relative;
+        top: 2px;
+    }
+
+    .about-faq-item .about-faq-question span {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about-faq-answer {
+        padding: 4px 0 12px;
+    }
+
+    .about-faq-container .about-us-link {
+        margin-top: 32px;
+    }
+
+
+    /*QUOTE*/
+    .about-quote {
+        margin-top: 48px;
+        padding: 32px 16px;
+    }
+
+    .about-quote .about-quote-text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+
+    /*ARTICLES*/
+    .about-articles {
+        margin-top: 48px;
+    }
+
+    .about-articles-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+        gap: 32px;
+        margin-top: 32px;
+    }
+
+    .about-articles .about-us-link {
+        margin-top: 32px;
+    }
+
+}
